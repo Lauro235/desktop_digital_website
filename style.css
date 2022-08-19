@@ -1,0 +1,56 @@
+html {
+  box-sizing: border-box;
+}
+
+*,*::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.image-container {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+}
+
+.image-desktop {
+  /* position: relative; ensures that z-index works appropriately */
+  max-width: 1100px;
+  position: relative;
+  z-index: 1;
+}
+
+.iframe-cv {
+  z-index: 0;
+  position: absolute;
+  left: 14%;
+  top: 5%;
+  height: 60%;
+  width: 72%;
+  display: block;
+}
+
+
+@media (max-width: 499px) {
+  .image-desktop {
+  display: none;
+  }
+  .iframe-cv {
+    display: none;
+  }
+}
+@media (max-width: 799px) {
+  .image-desktop {
+  width: 90%;
+  }
+}
