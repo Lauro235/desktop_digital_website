@@ -127,3 +127,14 @@ This stackoverflow article looks at [how to change the fontsize within an iframe
 Accessing the body itself proved a little tricky here is an excellent stackoverflow article that explains the solution to [accessing the body of an iframe](https://stackoverflow.com/questions/58802010/iframe-body-when-accessed-through-iframeelement-contentdocument-body-is-an-empty)
 
 ![Iframe body access](./assets/images_documentation/iframe_body_access.PNG)
+
+
+
+Goal - Stop height of svg from exceeding window height
+Plan - svg takes up the height and width of it's surrounding container.
+
+- Grab the height of the browser window with window.innerHeight ✔️
+- Grab the image-container node and see what happens when you change it's width
+
+Problems
+

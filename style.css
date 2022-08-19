@@ -10,26 +10,22 @@ body {
   margin: 0;
 }
 
-/* svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-} */
-
 .container {
   display: flex;
   justify-content: center;
+  align-content: center;
   width: 90%;
   margin: 0 auto;
 }
 
 .image-container {
+  display: block;
   position: relative;
   width: 90%;
   height: fit-content;
-  background-color: blue;
   margin: 0 auto;
   overflow-y: hidden;
+  padding-top: 2px;
 }
 
 .image-desktop {
