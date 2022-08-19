@@ -19,8 +19,9 @@ body {
 
 .image-container {
   position: relative;
-  width: fit-content;
+  width: 90%;
   height: fit-content;
+  background-color: blue;
 }
 
 .image-desktop {
@@ -40,6 +41,9 @@ body {
   display: block;
 }
 
+#svg8 {
+  width: 100%;
+}
 
 @media (max-width: 499px) {
   .image-desktop {

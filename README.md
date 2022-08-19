@@ -91,3 +91,27 @@
 - In style.css add the following to add some responsiveness to image on shrink
 
 ## Problems and Solutions
+
+In using the SVG as an image I reached the same problem of being blocked from scrolling when the image was above the iframe.
+
+One possible fix is to use the SVG on it's own as inline tag. It will create much ore dense HTML mark up, but may provide more flexibility.
+
+I'm now attempting to use the SVG inline. Notice the two ids relating to the screen layer. id="layer5" and id="path2006"
+
+![Inline SVG Screen ID](./assets/images_documentation/screen-svg-ids.PNG)
+
+### How to set the width of an SVG
+
+Checkout this link on stackoverflow on [how to set the width of an svg to take up the parent containers width](https://stackoverflow.com/questions/8919076/how-to-make-a-svg-element-expand-or-contract-to-its-parent-container)
+
+In your code check out the opening SVG tag
+
+![Opening SVG tag](./assets/images_documentation/opening_SVG_tag.PNG)
+
+Notice that the viewbox has the values "0,0,297,210"?
+
+If you go over to your Inkscape document and look for the document properties. You will see that the viewbox values match the width and height sizes you initially set when you made your inkscape project.
+
+![Document properties that match the viewbox values](./assets/images_documentation/viewbox_values_in_inkscape.PNG)
+
+Don't worry that the width is wider than the height. This is what it's meant to be as it's set to landscape!
