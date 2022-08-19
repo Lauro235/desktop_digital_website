@@ -115,3 +115,15 @@ If you go over to your Inkscape document and look for the document properties. Y
 ![Document properties that match the viewbox values](./assets/images_documentation/viewbox_values_in_inkscape.PNG)
 
 Don't worry that the width is wider than the height. This is what it's meant to be as it's set to landscape!
+
+### 1. Excessive space above and below pc screen
+
+Quick change that involves editing the document settings to resize around the svg. You need to delete the current inline SVG code and replace it when the file has been added and you can access the new code. Remember to add the iframe inside a foreign object tag and place this below the screen layer. Also remember to change width and height properties of svg tag to 100% and add preserveAspectRatio="none"
+
+### 2. Cannot change iframe font size
+
+This stackoverflow article looks at [how to change the fontsize within an iframe](https://stackoverflow.com/questions/16020308/why-iframe-font-size-doesnt-change-at-all)
+
+Accessing the body itself proved a little tricky here is an excellent stackoverflow article that explains the solution to [accessing the body of an iframe](https://stackoverflow.com/questions/58802010/iframe-body-when-accessed-through-iframeelement-contentdocument-body-is-an-empty)
+
+![Iframe body access](./assets/images_documentation/iframe_body_access.PNG)

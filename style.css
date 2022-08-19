@@ -10,6 +10,12 @@ body {
   margin: 0;
 }
 
+/* svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+} */
+
 .container {
   display: flex;
   justify-content: center;
@@ -22,11 +28,11 @@ body {
   width: 90%;
   height: fit-content;
   background-color: blue;
+  margin: 0 auto;
+  overflow-y: hidden;
 }
 
 .image-desktop {
-  /* position: relative; ensures that z-index works appropriately */
-  max-width: 1100px;
   position: relative;
   z-index: 1;
 }

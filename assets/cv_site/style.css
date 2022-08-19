@@ -18,7 +18,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   font-family: 'Lora', serif;
-  font-size: 10px;
+  /* font-size: 10px; */
   color: #ffe6d7;
 }
 
@@ -34,19 +34,19 @@ body {
 /* General */
 
 h1 {
-  font-size: 3.2rem;
+  /* font-size: 3.2rem; */
 }
 
 h2 {
-  font-size: 2.7rem;
+  /* font-size: 2.7rem; */
 }
 
 p {
-  font-size: 1.8rem;
+  /* font-size: 1.8rem; */
 }
 
 figcaption {
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
   margin: 1em 0;
 }
 
@@ -107,49 +107,18 @@ img {
   main {
     padding: 0 2em;
   }
-  h1 {
-    font-size: 5vw;
-  }
   figcaption {
-    font-size: 2.5vw;
     margin: 1em 0;
-  }
-  h2 {
-    font-size: 4.5vw;
-  }
-  p {
-    font-size: 3vw;
   }
 }
 
 @media screen and (max-width: 550px) {
-  h1 {
-    font-size: 7vw;
-  }
   figcaption {
-    font-size: 4vw;
     margin: 1em 0;
-  }
-  h2 {
-    font-size: 6.25vw;
-  }
-  p {
-    font-size: 5vw;
   }
 }
 
 @media screen and (max-width: 300px) {
-  h1 {
-    font-size: 1.4rem;
-  }
   figcaption {
-    font-size: 0.7rem;
     margin: 1em 0;
   }
-  h2 {
-    font-size: 1.4rem;
-  }
-  p {
-    font-size: 0.9rem;
-  }
-}
