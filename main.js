@@ -1,10 +1,14 @@
+const screenBorder1 = document.getElementById("path1781");
+const screenBorder2 = document.getElementById("path2006");
+const screenBorder3 = document.getElementById("path2031");
+
 window.addEventListener("DOMContentLoaded", () => {
   const windowHeight = window.innerHeight;
   const containerHeight = imageContainer.clientHeight;
   const containerWidth = imageContainer.clientWidth;
   if (containerHeight > windowHeight) {
     console.log(containerWidth);
-    imageContainer.style.width = (containerWidth - (containerWidth / 3.53)) + 'px'
+    imageContainer.style.width = containerWidth - containerWidth / 3.53 + "px";
     console.log(containerWidth);
   }
 });
@@ -18,42 +22,50 @@ const imageContainer = document.querySelector(".image-container");
 
 console.log(iframe);
 
-iframe.onload = function () {
-  console.log(iframe.contentDocument.body);
-  let content = iframe.contentDocument.body;
-  content.style.fontSize = "5px";
-};
-
 let imageContainerHeight;
 let imageContainerWidth;
 
 const observer = new ResizeObserver((entries) => {
   imageContainerHeight = entries[0].contentRect.height;
   imageContainerWidth = entries[0].contentRect.width;
+  console.log(imageContainerWidth);
+
+  // Create dynamic iframe fontsize
+  let content = iframe.contentDocument.body;
+  if (imageContainerWidth > 999) {
+    content.style.fontSize = "5px";
+  }
+  if (imageContainerWidth < 1000) {
+    content.style.fontSize = "10px";
+  }
 });
 
 observer.observe(imageContainer);
 // observer.observe(windowHeight)
 
 function adjustContainer(height) {
-  container.style.height = `${height}px`
-
+  container.style.height = `${height}px`;
 }
 
-// const checkScreenHeight = () => {
-//   console.log(`Window Height: ${windowHeight}`);
-//   console.log(`Image container height ${imageContainerHeight}`);
-//   if (imageContainerHeight >= windowHeight) {
-//     console.log(`${imageContainerWidth}px`);
-//     imageContainer.style.width = `${(imageContainerWidth - 2)}px`;
-//     console.log(
-//       `This is the window height: ${windowHeight} and this is the image container height ${imageContainerHeight}`
-//     );
-//   }
-// };
+iframe.onload = function () {
+  let content = iframe.contentDocument.body;
+  console.log(imageContainerWidth);
+  if (imageContainerWidth > 999) {
+    content.style.fontSize = "5px";
+  }
+  if (imageContainerWidth < 1000) {
+    content.style.fontSize = "10px";
+  }
+  console.log(iframe.contentDocument.body);
+};
 
-// if (imageContainerHeight >= windowHeight) {
-//   console.log(`${imageContainerWidth}px`);
-//   imageContainer.style.width = `${imageContainerWidth}px`
-//   console.log(`This is the window height: ${windowHeight} and this is the image container height ${imageContainerHeight}`);
-// }
+
+// Create hover effect on screen
+
+iframe.addEventListener("mouseenter", (e) => {
+  screenBorder1.style.stroke = "green";
+});
+
+iframe.addEventListener("mouseleave", (e) => {
+  screenBorder1.style.stroke = "black";
+});
