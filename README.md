@@ -135,6 +135,3 @@ Plan - svg takes up the height and width of it's surrounding container.
 
 - Grab the height of the browser window with window.innerHeight ✔️
 - Grab the image-container node and see what happens when you change it's width
-
-Problems
-
