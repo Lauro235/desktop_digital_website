@@ -47,14 +47,6 @@ body {
   width: 100%;
 }
 
-@media (max-width: 499px) {
-  .image-desktop {
-  display: none;
-  }
-  .iframe-cv {
-    display: none;
-  }
-}
 @media (max-width: 799px) {
   .image-desktop {
   width: 90%;
