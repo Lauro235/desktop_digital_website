@@ -1,39 +1,5 @@
 # Journey
 
-<style>
-  img {
-    width: auto;
-  }
-  h1 {
-    font-size: 34px;
-  }
-  h2 {
-    font-size: 28px;
-    text-decoration: underline;
-  }
-  h3 {
-    padding-top: 20px;
-    font-size: 22px;
-    font-style: italic;
-    font-weight: bold;
-  }
-  p, li, details, summary{
-    font-size: 18px;
-  }
-  details {
-    border: 2px 0px solid white;
-    padding-bottom: 15px;
-  }
-  a {
-    color: orange;
-  }
-  a:hover {
-    color: yellow;
-  }
-</style>
-
-### NOTE - The following tutorial cannot be done with a png. You MUST use an svg file. You will save yourself a lot of frustration and time!
-
 ## Initial Steps
 
 - Created new vscode project ✔️
@@ -135,6 +101,3 @@ Plan - svg takes up the height and width of it's surrounding container.
 
 - Grab the height of the browser window with window.innerHeight ✔️
 - Grab the image-container node and see what happens when you change it's width
-
-Problems
-
