@@ -19,3 +19,9 @@ This project uses SVGs and iframes to present the experience of scrolling throug
 - I got to practise some selective image rendering to using src set which was pretty nifty..
 
 - Lastly I learnt that there are restrictions in terms of what can be displayed in an iframe.
+
+## Moving forward
+
+I'll definitely try to spread the wonders of SVGs to future groups I work with as I can see some good benefits.
+
+Thanks for dropping by.
