@@ -1,103 +1,21 @@
-# Journey
+# Desktop Digital Website
 
-## Initial Steps
+## About
 
-- Created new vscode project ✔️
-- Create assets folder in root directory ✔️
-- create README.md in root directory ✔️
-- Inside assets folder add the folders "cv_site", "images" and "images_documentation" ✔️
-- In README add a title as well as a subtitle ##problems and solutions ✔️
-- Create index.html, style.css and main.js ✔️
-- In style.css add basic template to remove margin and padding, and change doc to border-box placement ✔️
-- Bring in the SVG you would like to use into your images folder ✔️
+This project uses SVGs and iframes to present the experience of scrolling through a given website on a pre made desktop pc.
 
-## index.html and style.css
+## Challenges
 
-- In index.html add a container div.
+1. Creating an svg
+2. Learning how to interact with an svg using javascript
+3. Learning how to style an svg
+4. Learning the restrictions of using iframes and finding a work around
+5. Practising a sensible amount of responsive design.
 
-```html
-  <div class="container"></div>
-```
+## Things I learnt
 
-- In style.css add the following
+- When building SVG's using inkscape, be careful to build from the ground up and give each layer a good name. it can be done although is a little fiddly. This helps styling and selecting in vanilla js.
 
-```css
-  .container {
-    display: flex;
-    justify-content: center;
-    width: 90%;
-    margin: 0 auto;
-  }
-```
+- I got to practise some selective image rendering to using src set which was pretty nifty..
 
-- inside the container add an image container div
-
-```html
-  <div class="container">
-    <div class="image-container"></div>
-  </div>
-```
-
-- In style.css add the following
-
-```css
-  .image-container {
-    position: relative;
-    width: fit-content;
-    height: fit-content;
-  }
-```
-
-- In index.html add the svg as an image tag
-
-```html
-  <img class="image-desktop" src="./assets/images/Desktop PC.svg" alt="Desktop PC image">
-```
-
-- In style.css add the following to add some responsiveness to image on shrink
-
-## Problems and Solutions
-
-In using the SVG as an image I reached the same problem of being blocked from scrolling when the image was above the iframe.
-
-One possible fix is to use the SVG on it's own as inline tag. It will create much ore dense HTML mark up, but may provide more flexibility.
-
-I'm now attempting to use the SVG inline. Notice the two ids relating to the screen layer. id="layer5" and id="path2006"
-
-![Inline SVG Screen ID](./assets/images_documentation/screen-svg-ids.PNG)
-
-### How to set the width of an SVG
-
-Checkout this link on stackoverflow on [how to set the width of an svg to take up the parent containers width](https://stackoverflow.com/questions/8919076/how-to-make-a-svg-element-expand-or-contract-to-its-parent-container)
-
-In your code check out the opening SVG tag
-
-![Opening SVG tag](./assets/images_documentation/opening_SVG_tag.PNG)
-
-Notice that the viewbox has the values "0,0,297,210"?
-
-If you go over to your Inkscape document and look for the document properties. You will see that the viewbox values match the width and height sizes you initially set when you made your inkscape project.
-
-![Document properties that match the viewbox values](./assets/images_documentation/viewbox_values_in_inkscape.PNG)
-
-Don't worry that the width is wider than the height. This is what it's meant to be as it's set to landscape!
-
-### 1. Excessive space above and below pc screen
-
-Quick change that involves editing the document settings to resize around the svg. You need to delete the current inline SVG code and replace it when the file has been added and you can access the new code. Remember to add the iframe inside a foreign object tag and place this below the screen layer. Also remember to change width and height properties of svg tag to 100% and add preserveAspectRatio="none"
-
-### 2. Cannot change iframe font size
-
-This stackoverflow article looks at [how to change the fontsize within an iframe](https://stackoverflow.com/questions/16020308/why-iframe-font-size-doesnt-change-at-all)
-
-Accessing the body itself proved a little tricky here is an excellent stackoverflow article that explains the solution to [accessing the body of an iframe](https://stackoverflow.com/questions/58802010/iframe-body-when-accessed-through-iframeelement-contentdocument-body-is-an-empty)
-
-![Iframe body access](./assets/images_documentation/iframe_body_access.PNG)
-
-
-
-Goal - Stop height of svg from exceeding window height
-Plan - svg takes up the height and width of it's surrounding container.
-
-- Grab the height of the browser window with window.innerHeight ✔️
-- Grab the image-container node and see what happens when you change it's width
+- Lastly I learnt that there are restrictions in terms of what can be displayed in an iframe.
