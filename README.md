@@ -4,6 +4,8 @@
 
 This project uses SVGs and iframes to present the experience of scrolling through a given website on a pre made desktop pc.
 
+[See the project here](https://lauro235.github.io/desktop_digital_website/)
+
 ## Challenges
 
 1. Creating an svg
